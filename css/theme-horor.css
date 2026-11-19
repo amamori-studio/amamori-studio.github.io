@@ -1,0 +1,92 @@
+/* TEMA HOROR — Pusaka Terlarang
+   Dimuat SETELAH style.css, dipakai lewat <body class="theme-horor"> */
+
+.theme-horor{
+  --bg:#060705;--bg-alt:#0b0d0a;--bg-card:#0e100c;--line:rgba(190,175,140,.14);
+  --text:#d9d3bf;--text-dim:#928f7a;--gold:#b3261a;--gold-light:#d0553f;
+  --serif:"IM Fell English",Georgia,serif;--sans:"Special Elite","Courier New",monospace;
+  --color-gold:#c0392b;--color-border:rgba(160,40,25,.4);--color-surface:#0a0c09;
+  --font-display:"IM Fell English",Georgia,serif;--font-body:"Spectral",Georgia,serif;
+  font-family:"Spectral",Georgia,serif;
+  scrollbar-color:#5c140d #060705;
+}
+.theme-horor ::selection{background:#b3261a;color:#fff}
+
+/* GRAIN FILM + VIGNET: gelap di tepi layar seperti senter di malam hari */
+.theme-horor::before{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.theme-horor::after{content:"";position:fixed;inset:0;z-index:89;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.8) 100%)}
+
+/* TIPOGRAFI */
+.theme-horor h1,.theme-horor h2,.theme-horor h3{font-weight:400;letter-spacing:.02em}
+.theme-horor h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;text-transform:none}
+.theme-horor em{color:var(--gold-light)}
+.theme-horor p{font-weight:300}
+.theme-horor .eyebrow{font-family:"Special Elite",monospace;font-size:.78rem;letter-spacing:.18em;color:#b3261a}
+
+/* NAVBAR */
+.theme-horor .navbar{background:rgba(6,7,5,.92);border-bottom:1px solid rgba(179,38,26,.35)}
+.theme-horor .brand-logo{border-color:rgba(179,38,26,.5);filter:grayscale(.6)}
+.theme-horor .nav-links a:hover,.theme-horor .nav-links a.active{color:#d0553f}
+.theme-horor .nav-links a::after{background:#b3261a}
+@media (max-width:900px){.theme-horor .nav-links{background:rgba(6,7,5,.98)}}
+
+/* HERO: kabut + judul berkedip */
+.theme-horor .page-hero{position:relative}
+.theme-horor .page-hero::before{content:"";position:absolute;inset:-5% -10% auto;height:75%;pointer-events:none;
+  background:radial-gradient(ellipse at 25% 25%,rgba(120,140,110,.14),transparent 60%);animation:kabut 16s ease-in-out infinite alternate}
+@keyframes kabut{from{transform:translateX(-4%)}to{transform:translateX(6%)}}
+.theme-horor .page-hero h1{text-shadow:0 0 24px rgba(179,38,26,.35);animation:kedip 9s infinite}
+.theme-horor .page-hero h1 em{text-shadow:0 0 20px rgba(179,38,26,.8)}
+@keyframes kedip{0%,17%,22%,61%,64%,100%{opacity:1}18%,63%{opacity:.2}20%{opacity:.75}}
+.theme-horor .page-hero-content p:not(.eyebrow){color:#b9b49f;line-height:1.85}
+.theme-horor .page-hero-content strong{color:#d0553f;font-weight:600}
+
+/* cap peserta lomba */
+.theme-horor .contest-badge{border:2px solid #b3261a;color:#d0553f;transform:rotate(-2.5deg);font-family:"Special Elite",monospace;box-shadow:inset 0 0 0 3px rgba(6,7,5,1),inset 0 0 0 4px rgba(179,38,26,.5)}
+
+/* TOMBOL */
+.theme-horor .btn{border-radius:0;font-family:"Special Elite",monospace}
+.theme-horor .btn-gold{background:transparent;color:#d9d3bf;border:1px solid #b3261a;box-shadow:0 0 18px rgba(179,38,26,.25)}
+.theme-horor .btn-gold:hover{background:#8f1d14;color:#fff;transform:none;box-shadow:0 0 34px rgba(179,38,26,.55)}
+
+/* GAMBAR: pudar, terang saat disorot */
+.theme-horor img{filter:grayscale(.7) contrast(1.15) brightness(.75) sepia(.2);transition:filter 1.4s ease,transform .7s ease}
+.theme-horor img:hover{filter:grayscale(.15) contrast(1.1) brightness(.95) sepia(.15)}
+.theme-horor .brand-logo img{filter:none}
+.theme-horor .page-hero-visual{border:1px solid rgba(179,38,26,.45);box-shadow:0 0 70px rgba(179,38,26,.15)}
+.theme-horor .gallery-item{border-color:rgba(179,38,26,.3);box-shadow:0 0 30px rgba(0,0,0,.8)}
+.theme-horor .gallery-item:nth-child(2){transform:rotate(1.2deg)}
+.theme-horor .gallery-item:nth-child(3){transform:rotate(-1deg)}
+
+/* BLOK BUDAYA: lembar jurnal penelitian */
+.theme-horor .culture-block{position:relative;background:linear-gradient(180deg,#060705,#0b0d0a 15%,#0b0d0a 85%,#060705)}
+.theme-horor .culture-inner h2{color:#d9d3bf}
+.theme-horor .culture-inner p:not(.eyebrow){color:#b9b49f;opacity:1;text-align:left;font-size:1.05rem}
+.theme-horor .culture-inner .eyebrow{text-align:center}
+.theme-horor .culture-inner strong{color:#d0553f;font-weight:600}
+.theme-horor .culture-point{background:#0e100c;border:2px dashed rgba(179,38,26,.5);/* jahitan benang, mengingatkan tenun */
+  padding:30px 26px;position:relative}
+.theme-horor .culture-point::before{content:"";position:absolute;top:-9px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#b3261a;box-shadow:0 0 12px rgba(179,38,26,.8)}
+.theme-horor .culture-point span{font-family:"Special Elite",monospace;color:#d0553f}
+.theme-horor .culture-point p{font-family:"Special Elite",monospace;font-size:.84rem;line-height:1.75;opacity:.85;color:#b9b49f}
+
+/* SECTION LAIN */
+.theme-horor .section-heading h2{color:#d9d3bf}
+.theme-horor .detail-box{background:#0e100c;border:1px dashed rgba(179,38,26,.4);border-radius:0}
+.theme-horor .detail-box span{font-family:"Special Elite",monospace;color:#d0553f}
+.theme-horor .detail-box strong{font-weight:400}
+.theme-horor .detail-box:hover{transform:none;border-color:#b3261a;box-shadow:0 0 22px rgba(179,38,26,.3)}
+
+/* FOOTER */
+.theme-horor footer{border-top:1px solid rgba(179,38,26,.35);background:#040503}
+.theme-horor .footer-brand span{color:#b3261a}
+
+/* MUNCUL PERLAHAN dari gelap, tanpa slide */
+.theme-horor .reveal{transform:none;transition:opacity 1.8s ease}
+
+@media (prefers-reduced-motion:reduce){
+  .theme-horor .page-hero h1,.theme-horor .page-hero::before{animation:none}
+  .theme-horor *{transition:none!important}
+}
