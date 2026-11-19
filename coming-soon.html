@@ -9,23 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-html{scroll-behavior:smooth}
 .pitch-block{padding:120px 8vw}
 .pitch-block.alt{background:var(--color-surface,#0f0d0a)}
 .block-heading{max-width:720px;margin:0 auto 64px;text-align:center}
 .block-heading .eyebrow{display:block;margin-bottom:14px}
 .block-heading h2{font-family:var(--font-display,'Comic Neue',cursive)}
 .block-heading p.lead{font-family:var(--font-body,'Comic Neue',cursive);font-weight:300;opacity:.8;margin-top:18px;line-height:1.7}
-
-/* PEMILIH PROYEK */
-.project-picker{padding:80px 8vw 40px}
-.project-picker .block-heading{margin-bottom:40px}
-.picker-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:0 auto}
-.picker-card{display:block;padding:32px 28px;text-decoration:none;color:inherit;border:1px solid var(--color-border,rgba(201,162,39,.3));transition:border-color .3s,transform .3s}
-.picker-card:hover{border-color:var(--color-gold,#c9a227);transform:translateY(-4px)}
-.picker-card .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-gold,#c9a227);display:block;margin-bottom:12px}
-.picker-card h3{font-family:var(--font-display,'Comic Neue',cursive);font-size:1.6rem;margin-bottom:8px}
-.picker-card p{font-size:.9rem;opacity:.75;line-height:1.6}
 
 /* GAMEPLAY LOOP */
 .loop-wrap{max-width:1100px;margin:0 auto}
@@ -86,19 +75,12 @@ html{scroll-behavior:smooth}
 .closing-poem .poem-center{font-size:clamp(1.6rem,3.2vw,2.4rem);font-style:italic;margin:32px 0;color:var(--color-gold,#c9a227)}
 .closing-poem .poem-tag{font-family:var(--font-body,'Comic Neue',cursive);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
 
-/* GAME LOMBA BUDAYA */
-.contest-badge{display:inline-block;padding:6px 14px;margin-bottom:18px;border:1px solid var(--color-gold,#c9a227);color:var(--color-gold,#c9a227);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
-.contest-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1100px;margin:0 auto;align-items:center}
-.contest-grid img{width:100%;display:block}
-.contest-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--color-border,rgba(201,162,39,.2));max-width:1100px;margin:56px auto 0}
-.contest-meta div{background:var(--color-bg,#0a0908);padding:22px}
-.contest-meta span{display:block;font-size:.72rem;letter-spacing:.12em;opacity:.6;text-transform:uppercase;margin-bottom:6px}
 
 @media (max-width:900px){
 .loop-steps{grid-template-columns:repeat(2,1fr)}
 .loop-step{border-right:1px solid var(--color-border,rgba(201,162,39,.25))}
 .loop-step:nth-child(2n){border-right:none}
-.features-grid,.pillar-grid,.picker-grid,.contest-grid,.contest-meta{grid-template-columns:1fr}
+.features-grid,.pillar-grid{grid-template-columns:1fr}
 .audience-columns,.platform-grid,.business-grid{grid-template-columns:1fr;gap:40px}
 .pitch-block{padding:80px 6vw}
 }
@@ -114,6 +96,7 @@ html{scroll-behavior:smooth}
     <nav class="nav-links">
         <a href="index.html">Beranda</a>
         <a href="coming-soon.html" class="active">Segera Hadir</a>
+        <a href="budaya.html">Lomba Budaya</a>
         <a href="games.html">Game</a>
         <a href="team.html">Tim</a>
     </nav>
@@ -132,29 +115,6 @@ html{scroll-behavior:smooth}
         <a href="https://drive.google.com/drive/folders/1ViXt6lnT6jnoe_vwiomBOSWl9xYodHuF" target="_blank" rel="noopener" class="btn btn-gold">Coba Prototipe</a>
     </div>
 </section>
-
-<!-- PEMILIH PROYEK -->
-<section class="project-picker">
-    <div class="block-heading reveal">
-        <p class="eyebrow">PROYEK SEGERA HADIR</p>
-        <h2>Dua cerita,<br><em>satu studio.</em></h2>
-    </div>
-    <div class="picker-grid reveal">
-        <a href="#snhi" class="picker-card">
-            <span class="tag">Simulasi · Cerita</span>
-            <h3>Sepiring Nasi Hari Ini</h3>
-            <p>Kelola warung, temui orang-orang dengan kisah hidupnya.</p>
-        </a>
-        <a href="#game-budaya" class="picker-card">
-            <span class="tag">Lomba Budaya Go · [GENRE]</span>
-            <h3>[JUDUL GAME 2]</h3>
-            <p>[Satu kalimat tentang game ini]</p>
-        </a>
-    </div>
-</section>
-
-<!-- ============ GAME 1: SEPIRING NASI HARI INI ============ -->
-<div id="snhi">
 
 <!-- PITCH -->
 <section class="section pitch-section">
@@ -510,34 +470,6 @@ html{scroll-behavior:smooth}
     </div>
     <p class="poem-center reveal">Dan di tengah semuanya,<br>ada sepiring nasi.</p>
     <p class="poem-tag reveal">Different lives. Different struggles. One reason to keep going.</p>
-</section>
-
-</div><!-- /snhi -->
-
-<!-- ============ GAME 2: LOMBA BUDAYA GO ============ -->
-<section class="pitch-block alt" id="game-budaya">
-    <div class="section-label reveal"><span>02</span> PROYEK LOMBA</div>
-
-    <div class="contest-grid reveal">
-        <div>
-            <span class="contest-badge">Peserta Lomba Budaya Go</span>
-            <h2 style="font-family:var(--font-display,'Comic Neue',cursive);">[JUDUL GAME 2]</h2>
-            <p class="lead" style="line-height:1.7; opacity:.85; margin-top:16px;">
-                [Sinopsis singkat: siapa pemainnya, apa yang dilakukan, apa konfliknya.]
-            </p>
-            <p style="line-height:1.7; opacity:.75; margin-top:14px;">
-                <strong>Budaya yang diangkat:</strong> [nama budaya / daerah / tradisi dan bagaimana ia hadir di gameplay].
-            </p>
-            <a href="[LINK PROTOTIPE]" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:24px;">Coba Prototipe</a>
-        </div>
-        <img src="assets/images/[gambar-game2].png" alt="Visual [JUDUL GAME 2]">
-    </div>
-
-    <div class="contest-meta reveal">
-        <div><span>Genre</span><strong>[Genre]</strong></div>
-        <div><span>Platform</span><strong>[PC / Mobile]</strong></div>
-        <div><span>Status</span><strong>Dalam Pengembangan</strong></div>
-    </div>
 </section>
 
 <!-- CTA AKHIR -->
