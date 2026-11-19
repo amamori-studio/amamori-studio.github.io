@@ -1,122 +1,122 @@
-/* TEMA WARUNG — Sepiring Nasi Hari Ini
+/* TEMA WARUNG BIRU — Sepiring Nasi Hari Ini
    Dimuat SETELAH style.css, dipakai lewat <body class="theme-warung"> */
 
 .theme-warung{
-  --bg:#f0e1bc;--bg-alt:#e7d4a4;--bg-card:#fbf3de;--line:rgba(74,42,22,.22);
-  --text:#3a2416;--text-dim:#6a4a33;--gold:#c2331f;--gold-light:#2f6b3a;
+  --bg:#dbe9f7;--bg-alt:#c4dbf0;--bg-card:#f4f9ff;--line:rgba(16,40,74,.22);
+  --text:#0c2447;--text-dim:#3c5a82;--gold:#1f5fbf;--gold-light:#0e3f8a;
   --serif:"Lilita One","Comic Neue",cursive;--sans:"Nunito","Comic Neue",sans-serif;
   /* variabel yang dipakai style inline di halaman */
-  --color-gold:#c2331f;--color-border:rgba(74,42,22,.25);--color-surface:#e7d4a4;--color-bg:#f0e1bc;
+  --color-gold:#1f5fbf;--color-border:rgba(16,40,74,.25);--color-surface:#c4dbf0;--color-bg:#dbe9f7;
   --font-display:"Lilita One",cursive;--font-body:"Nunito",sans-serif;
-  --papan:#24382c;--kayu:#8a5a2e;--kunyit:#f2c14e;
+  --papan:#12305c;--kayu:#3b7dd8;--kunyit:#9fd0ff;
   /* taplak meja kotak-kotak */
-  background-image:linear-gradient(rgba(194,51,31,.08) 50%,transparent 50%),linear-gradient(90deg,rgba(194,51,31,.08) 50%,transparent 50%);
+  background-image:linear-gradient(rgba(31,95,191,.08) 50%,transparent 50%),linear-gradient(90deg,rgba(31,95,191,.08) 50%,transparent 50%);
   background-size:44px 44px;
 }
-.theme-warung ::selection{background:var(--gold);color:#fff6e2}
+.theme-warung ::selection{background:var(--gold);color:#ffffff}
 .theme-warung h1,.theme-warung h2,.theme-warung h3{font-weight:400;letter-spacing:.01em}
 .theme-warung h1,.theme-warung h2{color:var(--text)}
 .theme-warung em{color:var(--gold-light)}
 
 /* label tulisan tangan, bukan huruf kapital */
 .theme-warung .eyebrow,.theme-warung .section-label{font-family:"Caveat",cursive;font-size:1.4rem;letter-spacing:0;text-transform:none;font-weight:700;color:var(--gold)}
-.theme-warung .section-label span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--gold);color:#fff6e2;font-family:var(--serif);font-size:1rem}
+.theme-warung .section-label span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--gold);color:#ffffff;font-family:var(--serif);font-size:1rem}
 
 /* NAVBAR: papan nama + tenda warung */
-.theme-warung .navbar{background:#fbf3de;border-bottom:0;box-shadow:0 2px 0 var(--kayu)}
+.theme-warung .navbar{background:#f4f9ff;border-bottom:0;box-shadow:0 2px 0 var(--kayu)}
 .theme-warung .navbar::after{content:"";position:absolute;left:0;right:0;top:100%;height:18px;pointer-events:none;
-  background:repeating-linear-gradient(90deg,var(--gold) 0 36px,#fbf3de 36px 72px);
+  background:repeating-linear-gradient(90deg,var(--gold) 0 36px,#f4f9ff 36px 72px);
   -webkit-mask:radial-gradient(circle at 18px 0,#000 17px,transparent 18px) 0 0/36px 18px repeat-x;
   mask:radial-gradient(circle at 18px 0,#000 17px,transparent 18px) 0 0/36px 18px repeat-x;
-  filter:drop-shadow(0 3px 0 rgba(58,36,22,.25))}
+  filter:drop-shadow(0 3px 0 rgba(10,30,60,.25))}
 .theme-warung .brand-logo{border-color:var(--gold)}
 .theme-warung .brand-name strong{color:var(--text)}
 .theme-warung .nav-links a{font-weight:700;letter-spacing:.06em}
 .theme-warung .nav-links a:hover,.theme-warung .nav-links a.active{color:var(--gold)}
 .theme-warung .menu-toggle span{background:var(--text);height:2px}
-@media (max-width:900px){.theme-warung .nav-links{background:#fbf3de}}
+@media (max-width:900px){.theme-warung .nav-links{background:#f4f9ff}}
 
 /* TOMBOL: stiker pesan */
 .theme-warung .btn{border-radius:999px;font-weight:800;letter-spacing:.06em}
-.theme-warung .btn-gold{background:var(--gold);color:#fff6e2;box-shadow:0 4px 0 #7d1f11}
-.theme-warung .btn-gold:hover{background:#d63d27;transform:translateY(2px);box-shadow:0 2px 0 #7d1f11}
+.theme-warung .btn-gold{background:var(--gold);color:#ffffff;box-shadow:0 4px 0 #123f86}
+.theme-warung .btn-gold:hover{background:#2f74d8;transform:translateY(2px);box-shadow:0 2px 0 #123f86}
 
 /* HERO: spanduk cat tangan */
-.theme-warung .hero-overlay{background:linear-gradient(180deg,rgba(58,36,22,.2) 0%,rgba(58,36,22,.93) 92%)}
-.theme-warung .coming-hero h1{color:#fbf3de;font-size:clamp(3rem,8vw,6.5rem);text-shadow:4px 4px 0 var(--gold);line-height:1}
+.theme-warung .hero-overlay{background:linear-gradient(180deg,rgba(10,30,60,.2) 0%,rgba(10,30,60,.93) 92%)}
+.theme-warung .coming-hero h1{color:#f4f9ff;font-size:clamp(3rem,8vw,6.5rem);text-shadow:4px 4px 0 var(--gold);line-height:1}
 .theme-warung .coming-hero h1 em{color:var(--kunyit)}
-.theme-warung .coming-hero p{color:#f6e9cc}
+.theme-warung .coming-hero p{color:#dbe9f7}
 .theme-warung .coming-hero .eyebrow{color:var(--kunyit)}
 
 /* FOTO: seperti cetakan foto di dinding warung */
-.theme-warung .pitch-image,.theme-warung .story-image{border:8px solid #fffaf0;border-radius:2px;box-shadow:0 12px 28px rgba(58,36,22,.3);transform:rotate(1.4deg)}
+.theme-warung .pitch-image,.theme-warung .story-image{border:8px solid #ffffff;border-radius:2px;box-shadow:0 12px 28px rgba(10,30,60,.3);transform:rotate(1.4deg)}
 .theme-warung .story-image{transform:rotate(-1.4deg)}
-.theme-warung .gallery-item{border:6px solid #fffaf0;border-radius:2px;box-shadow:0 8px 20px rgba(58,36,22,.25)}
+.theme-warung .gallery-item{border:6px solid #ffffff;border-radius:2px;box-shadow:0 8px 20px rgba(10,30,60,.25)}
 .theme-warung .gallery-item:nth-child(2){transform:rotate(1.2deg)}
 .theme-warung .gallery-item:nth-child(3){transform:rotate(-1.2deg)}
 
 /* BLOK SECTION */
-.theme-warung .pitch-block.alt{background:var(--bg-alt);border-block:3px dashed rgba(74,42,22,.35)}
+.theme-warung .pitch-block.alt{background:var(--bg-alt);border-block:3px dashed rgba(16,40,74,.35)}
 .theme-warung .video-section .btn,.theme-warung .final-cta .btn{margin-top:.5rem}
 
 /* GAMEPLAY LOOP: papan tulis kapur */
-.theme-warung .loop-steps{background:var(--papan);border:10px solid var(--kayu);border-radius:6px;box-shadow:inset 0 0 50px rgba(0,0,0,.5),0 10px 24px rgba(58,36,22,.3)}
+.theme-warung .loop-steps{background:var(--papan);border:10px solid var(--kayu);border-radius:6px;box-shadow:inset 0 0 50px rgba(0,0,0,.5),0 10px 24px rgba(10,30,60,.3)}
 .theme-warung .loop-step{border-color:rgba(255,255,255,.18)}
 .theme-warung .loop-step .loop-index{font-family:"Caveat",cursive;font-size:2.6rem;color:var(--kunyit)}
-.theme-warung .loop-step h4{font-family:"Caveat",cursive;font-size:1.6rem;letter-spacing:0;text-transform:none;color:#fbf3de}
-.theme-warung .loop-step p{color:#dfe8d8;opacity:.9}
+.theme-warung .loop-step h4{font-family:"Caveat",cursive;font-size:1.6rem;letter-spacing:0;text-transform:none;color:#f4f9ff}
+.theme-warung .loop-step p{color:#dbe9f7;opacity:.9}
 .theme-warung .loop-note{color:var(--text-dim);opacity:1}
 
 /* FITUR: nota pesanan */
 .theme-warung .features-grid{background:none;gap:28px}
-.theme-warung .feature-card{background:#fffaf0;border:2px dashed rgba(74,42,22,.4);padding:32px 28px;transform:rotate(-.8deg);box-shadow:0 8px 0 -4px rgba(74,42,22,.15)}
+.theme-warung .feature-card{background:#ffffff;border:2px dashed rgba(16,40,74,.4);padding:32px 28px;transform:rotate(-.8deg);box-shadow:0 8px 0 -4px rgba(16,40,74,.15)}
 .theme-warung .feature-card:nth-child(even){transform:rotate(.9deg)}
 .theme-warung .feature-card h3{color:var(--gold)}
 .theme-warung .feature-card p{color:var(--text-dim);opacity:1}
 
 /* USP: daun pisang */
 .theme-warung .usp-hook{color:var(--gold-light)}
-.theme-warung .pillar-card{background:#3f6b3a;border:0;border-radius:0 44px 0 44px;box-shadow:0 8px 0 #2b4d28}
+.theme-warung .pillar-card{background:#1f5fbf;border:0;border-radius:0 44px 0 44px;box-shadow:0 8px 0 #12396f}
 .theme-warung .pillar-card .pillar-label{font-family:"Caveat",cursive;font-size:1.6rem;letter-spacing:0;text-transform:none;color:var(--kunyit)}
-.theme-warung .pillar-card p{color:#f1f5e6;opacity:1}
+.theme-warung .pillar-card p{color:#ffffff;opacity:1}
 
 /* TARGET & PLATFORM */
 .theme-warung .audience-columns li{border-color:var(--line)}
 .theme-warung .player-promise{color:var(--text)}
-.theme-warung .platform-card{background:var(--bg-card);border:3px solid var(--kayu);border-radius:16px;box-shadow:0 6px 0 rgba(138,90,46,.5)}
+.theme-warung .platform-card{background:var(--bg-card);border:3px solid var(--kayu);border-radius:16px;box-shadow:0 6px 0 rgba(59,125,216,.5)}
 .theme-warung .platform-card span.store{color:var(--gold);font-weight:800}
-.theme-warung .revenue-flow span.node{background:#fffaf0;border:2px dashed rgba(74,42,22,.4);border-radius:999px}
+.theme-warung .revenue-flow span.node{background:#ffffff;border:2px dashed rgba(16,40,74,.4);border-radius:999px}
 .theme-warung .future-content li::before{color:var(--gold)}
 
 /* KARAKTER: kartu pelanggan */
-.theme-warung .character-card{background:#fffaf0;border:0;padding:12px 12px 0;box-shadow:0 10px 22px rgba(58,36,22,.22)}
+.theme-warung .character-card{background:#ffffff;border:0;padding:12px 12px 0;box-shadow:0 10px 22px rgba(10,30,60,.22)}
 .theme-warung .character-card:nth-child(3n+1){transform:rotate(-1deg)}
 .theme-warung .character-card:nth-child(3n){transform:rotate(1deg)}
 .theme-warung .character-card:hover{transform:translateY(-6px) rotate(0);border-color:transparent}
 .theme-warung .character-info span{color:var(--gold)}
 .theme-warung .character-info h3{color:var(--text)}
 .theme-warung .character-description{font-style:italic}
-.theme-warung .model-viewer-container{background:radial-gradient(circle at 50% 30%,rgba(242,193,78,.45),transparent 70%);border:3px solid var(--kayu);border-radius:16px}
+.theme-warung .model-viewer-container{background:radial-gradient(circle at 50% 30%,rgba(159,208,255,.45),transparent 70%);border:3px solid var(--kayu);border-radius:16px}
 
 /* PROGRES */
-.theme-warung .progress-bar{height:16px;border-radius:99px;background:rgba(74,42,22,.15);border:2px solid var(--kayu)}
-.theme-warung .progress-fill{background:repeating-linear-gradient(45deg,#e0a526 0 12px,var(--kunyit) 12px 24px)}
+.theme-warung .progress-bar{height:16px;border-radius:99px;background:rgba(16,40,74,.15);border:2px solid var(--kayu)}
+.theme-warung .progress-fill{background:repeating-linear-gradient(45deg,#2f74d8 0 12px,var(--kunyit) 12px 24px)}
 .theme-warung .progress-header strong{color:var(--gold)}
-.theme-warung .dev-item{background:var(--bg-card);border:2px dashed rgba(74,42,22,.35)}
+.theme-warung .dev-item{background:var(--bg-card);border:2px dashed rgba(16,40,74,.35)}
 .theme-warung .dev-item.completed{border:2px solid var(--gold-light)}
-.theme-warung .dev-item.active{border:2px solid var(--gold);background:#fffaf0}
+.theme-warung .dev-item.active{border:2px solid var(--gold);background:#ffffff}
 .theme-warung .dev-item h3{color:var(--text)}
 
 /* PENUTUP: tulisan kapur di papan */
 .theme-warung .closing-poem{background:var(--papan);border-block:12px solid var(--kayu);box-shadow:inset 0 0 80px rgba(0,0,0,.5)}
 .theme-warung .closing-poem .eyebrow{color:var(--kunyit)}
-.theme-warung .closing-poem .poem-lines p{font-family:"Caveat",cursive;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.7;color:#fbf3de;opacity:1}
+.theme-warung .closing-poem .poem-lines p{font-family:"Caveat",cursive;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.7;color:#f4f9ff;opacity:1}
 .theme-warung .closing-poem .poem-center{font-family:"Caveat",cursive;font-size:clamp(2.2rem,4.5vw,3.4rem);font-style:normal;color:var(--kunyit)}
-.theme-warung .closing-poem .poem-tag{color:#c9d8c4;opacity:1}
+.theme-warung .closing-poem .poem-tag{color:#bcd4f0;opacity:1}
 
 /* FOOTER */
-.theme-warung footer{background:#3a2416;border:0;color:#f6e9cc}
-.theme-warung footer p,.theme-warung .footer-bottom{color:#d9c8a6}
+.theme-warung footer{background:#0c2447;border:0;color:#dbe9f7}
+.theme-warung footer p,.theme-warung .footer-bottom{color:#a9c4e6}
 .theme-warung .footer-brand span{color:var(--kunyit)}
 
 @media (prefers-reduced-motion:reduce){.theme-warung *{transition:none!important}}
