@@ -86,7 +86,14 @@
 .theme-horor .model-loading{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font-family:"Special Elite",monospace;font-size:.85rem;letter-spacing:.14em;color:#d0553f;
+  pointer-events:none;
 }
+.theme-horor model-viewer.is-loaded .model-loading{display:none}
+.theme-horor .model-error{
+  display:none;text-align:center;margin-top:14px;
+  font-family:"Special Elite",monospace;font-size:.8rem;color:#d0553f;
+}
+.theme-horor .model-error.show{display:block}
 .theme-horor .model-hint{
   text-align:center;margin-top:14px;
   font-family:"Special Elite",monospace;font-size:.76rem;letter-spacing:.12em;color:var(--text-dim);
