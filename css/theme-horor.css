@@ -72,6 +72,27 @@
 .theme-horor .culture-point span{font-family:"Special Elite",monospace;color:#d0553f}
 .theme-horor .culture-point p{font-family:"Special Elite",monospace;font-size:.84rem;line-height:1.75;opacity:.85;color:#b9b49f}
 
+/* MODEL 3D: pusaka di bawah cahaya senter */
+.theme-horor .model-wrap{max-width:900px;margin:0 auto;position:relative}
+.theme-horor model-viewer{
+  width:100%;height:min(70vh,560px);display:block;
+  background:radial-gradient(ellipse at 50% 40%,rgba(179,38,26,.18),rgba(6,7,5,1) 70%);
+  border:1px solid rgba(179,38,26,.45);
+  box-shadow:0 0 70px rgba(179,38,26,.15),inset 0 0 80px rgba(0,0,0,.8);
+  --poster-color:transparent;
+  --progress-bar-color:#b3261a;
+  outline:none;
+}
+.theme-horor .model-loading{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:"Special Elite",monospace;font-size:.85rem;letter-spacing:.14em;color:#d0553f;
+}
+.theme-horor .model-hint{
+  text-align:center;margin-top:14px;
+  font-family:"Special Elite",monospace;font-size:.76rem;letter-spacing:.12em;color:var(--text-dim);
+}
+@media (max-width:900px){.theme-horor model-viewer{height:420px}}
+
 /* SECTION LAIN */
 .theme-horor .section-heading h2{color:#d9d3bf}
 .theme-horor .detail-box{background:#0e100c;border:1px dashed rgba(179,38,26,.4);border-radius:0}
