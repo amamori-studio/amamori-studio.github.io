@@ -100,6 +100,7 @@
             <div class="model-loading" slot="progress-bar">Memanggil pusaka…</div>
         </model-viewer>
         <p class="model-hint">Seret untuk memutar · Cubit atau scroll untuk zoom</p>
+        <p class="model-error" id="pusaka-error">Model 3D gagal dimuat. Pastikan file assets/models/pusaka.glb ada dan halaman dibuka lewat server (bukan file://).</p>
     </div>
 </section>
 
@@ -138,9 +139,28 @@
 <script>
 /* Hormati pengaturan "kurangi gerakan": matikan putar otomatis model 3D */
 if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var v = document.getElementById('pusaka-viewer');
-    if (v) v.removeAttribute('auto-rotate');
+    var v0 = document.getElementById('pusaka-viewer');
+    if (v0) v0.removeAttribute('auto-rotate');
 }
+(function () {
+    var v = document.getElementById('pusaka-viewer');
+    var err = document.getElementById('pusaka-error');
+    if (!v) return;
+    v.addEventListener('load', function () { v.classList.add('is-loaded'); });
+    v.addEventListener('error', function (e) {
+        console.error('Model 3D gagal dimuat:', e && e.detail);
+        if (err) err.classList.add('show');
+    });
+    /* Jika komponen <model-viewer> sendiri tidak termuat (script diblokir / offline) */
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            if (!window.customElements.get('model-viewer') && err) {
+                err.textContent = 'Komponen 3D tidak termuat. Cek koneksi internet atau blokir script (adblock).';
+                err.classList.add('show');
+            }
+        }, 3000);
+    });
+})();
 </script>
 </body>
 </html>
