@@ -6,9 +6,10 @@
 <title>PUSAKA TERLARANG — Lomba Budaya Go — Amamori Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/theme-horor.css">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 <style>
 .contest-badge{display:inline-block;padding:6px 14px;margin-bottom:18px;border:1px solid var(--color-gold,#c9a227);color:var(--color-gold,#c9a227);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
 .culture-block{padding:100px 8vw;background:var(--color-surface,#0f0d0a)}
@@ -72,6 +73,36 @@
     </div>
 </section>
 
+<!-- MODEL 3D -->
+<section class="section model-section">
+    <div class="section-heading reveal">
+        <div>
+            <p class="eyebrow">PUSAKA</p>
+            <h2>Sentuh, putar,<br><em>amati dari dekat.</em></h2>
+        </div>
+    </div>
+    <div class="model-wrap reveal">
+        <model-viewer id="pusaka-viewer"
+            src="assets/models/pusaka.glb"
+            alt="Model 3D pusaka dari rumah leluhur di Pusaka Terlarang"
+            camera-controls
+            auto-rotate
+            auto-rotate-delay="1500"
+            rotation-per-second="18deg"
+            touch-action="pan-y"
+            interaction-prompt="auto"
+            shadow-intensity="1.2"
+            exposure="0.9"
+            environment-image="neutral"
+            camera-orbit="30deg 75deg 105%"
+            min-camera-orbit="auto auto 60%"
+            max-camera-orbit="auto auto 200%">
+            <div class="model-loading" slot="progress-bar">Memanggil pusaka…</div>
+        </model-viewer>
+        <p class="model-hint">Seret untuk memutar · Cubit atau scroll untuk zoom</p>
+    </div>
+</section>
+
 <!-- GALERI -->
 <section class="section">
     <div class="section-heading reveal">
@@ -104,5 +135,12 @@
 </main>
 
 <script src="js/main.js"></script>
+<script>
+/* Hormati pengaturan "kurangi gerakan": matikan putar otomatis model 3D */
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var v = document.getElementById('pusaka-viewer');
+    if (v) v.removeAttribute('auto-rotate');
+}
+</script>
 </body>
 </html>
